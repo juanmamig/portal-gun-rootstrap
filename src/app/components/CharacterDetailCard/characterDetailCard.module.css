@@ -1,0 +1,51 @@
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    background-color: var(--cardDark);
+    border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    border-radius: 8px 0 0 8px;
+    object-position: center center;
+    object-fit: cover;
+  }
+  
+  .details {
+    color: var(--textWhite);
+    margin: 20px;
+  }
+
+  .details h1 {
+    margin-bottom: 0;
+  }
+
+  .details p {
+    margin: 15px 0;
+  }
+
+  .details span {
+    color: var(--textGray);
+    font-weight: bold;
+  }
+  
+  .name {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: var(--textWhite);
+  }
+
+  @media (max-width: 552px) {
+    .card {
+      grid-template-columns: 1fr;
+    }
+  }
+  
