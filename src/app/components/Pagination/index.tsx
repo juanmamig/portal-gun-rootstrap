@@ -30,6 +30,7 @@ const Pagination = ({ info }: { info: IInfo }) => {
           <Link
             href={`${pathname}?name=${name || ''}&page=${page - 1}`}
             className={classes.paginationPrevNext}
+            aria-label='Go to previous page'
           >
             <Chevron direction='left' size={22} />
           </Link>
@@ -43,6 +44,7 @@ const Pagination = ({ info }: { info: IInfo }) => {
           <Link
             href={`${pathname}?name=${name || ''}&page=${page + 1}`}
             className={classes.paginationPrevNext}
+            aria-label='Go to next page'
           >
             <Chevron direction='right' size={22} />
           </Link>

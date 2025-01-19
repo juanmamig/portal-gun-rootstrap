@@ -32,16 +32,14 @@ const CharactersContent = async ({
   );
 };
 
-const Characters = ({
+const Characters = async ({
   searchParams,
 }: {
   searchParams: Promise<ISearchParams>;
 }) => {
+  const { page } = await searchParams;
   return (
-    <Suspense
-      key={JSON.stringify(searchParams)}
-      fallback={<CharacterGrid isLoading />}
-    >
+    <Suspense key={page} fallback={<CharacterGrid isLoading />}>
       <CharactersContent searchParams={searchParams} />
     </Suspense>
   );

@@ -8,9 +8,10 @@
 .pageLinksLink {
   display: block;
 
+  margin: 0 5px;
   padding: 5px;
 
-  font-size: 20px;
+  font-size: 24px;
 }
 .pageLinksLink:hover {
   text-decoration: underline;

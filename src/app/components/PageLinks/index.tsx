@@ -30,6 +30,7 @@ const PageLinks = ({
           <Link
             className={`${classes.pageLinksLink} ${currentPage === page ? classes.active : ''}`}
             href={`?name=${characterName || ''}&page=${page}`}
+            aria-label={`Go to page ${page}`}
           >
             {page}
           </Link>

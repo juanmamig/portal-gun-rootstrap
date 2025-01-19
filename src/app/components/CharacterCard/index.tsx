@@ -13,8 +13,9 @@ const CharacterCard = ({ character }: { character: ICharacter }) => {
         <div className={classes.imageWrapper}>
           <Image
             fill
+            objectFit='cover'
             src={character.image}
-            alt={character.name}
+            alt={`Image of ${character.name}`}
             className={classes.characterImage}
           />
         </div>
