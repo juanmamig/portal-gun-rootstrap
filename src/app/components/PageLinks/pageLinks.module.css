@@ -1,18 +1,18 @@
 .pageLinksList {
-    display: flex;
-    list-style: none;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 
 .pageLinksLink {
-    display: block;
-    padding: 5px;
-    font-size: 20px;
+  display: block;
+  padding: 5px;
+  font-size: 20px;
 }
 .pageLinksLink:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .active {
-    color: var(--sciFiGreen);;
+  color: var(--sciFiGreen);
 }

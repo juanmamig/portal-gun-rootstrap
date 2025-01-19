@@ -23,7 +23,7 @@ query {
     }
   }
 }
-`
+`;
 
 export const singleCharacterQuery = (id: string) => `
 {
@@ -41,4 +41,4 @@ export const singleCharacterQuery = (id: string) => `
     }
   }
 }
-`
+`;

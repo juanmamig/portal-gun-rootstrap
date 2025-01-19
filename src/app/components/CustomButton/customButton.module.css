@@ -1,24 +1,24 @@
 .btn {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    padding: 5px 10px;
-    margin: 20px;
-    border-radius: 4px;
-    background-color: var(--teal);;
-    border: 1px solid var(--teal);;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  padding: 5px 10px;
+  margin: 20px;
+  border-radius: 4px;
+  background-color: var(--teal);
+  border: 1px solid var(--teal);
+  cursor: pointer;
 }
 
 .btn:hover {
-    background-color: var(--sciFiGreen);
-    border: 1px solid var(--sciFiGreen);;
-    color: white;
+  background-color: var(--sciFiGreen);
+  border: 1px solid var(--sciFiGreen);
+  color: white;
 }
 
 .btn:disabled {
-    background-color: #ccc;
-    border: 1px solid #ccc;
-    color: white;
-    cursor: not-allowed;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  color: white;
+  cursor: not-allowed;
 }

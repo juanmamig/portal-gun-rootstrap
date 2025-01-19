@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import "./globals.css";
-import SearchBar from "./components/SearchBar";
-import Link from "next/link";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import './globals.css';
+import Link from 'next/link';
+
+import SearchBar from './components/SearchBar';
 
 export const metadata: Metadata = {
-  title: "Portal Gun - Rootstrap",
-  description: "How about second chances? Because the first try is never great... just like your ex!",
+  title: 'Portal Gun - Rootstrap',
+  description:
+    'How about second chances? Because the first try is never great... just like your ex!',
 };
 
 export default function RootLayout({
@@ -15,13 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
         <main>
           <header>
-            <div className="headerLogo">
-              <Link href="/">
-                <Image src="/rick_and_morty_logo.svg" alt="Rick and Morty" fill />
+            <div className='headerLogo'>
+              <Link href='/'>
+                <Image
+                  src='/rick_and_morty_logo.svg'
+                  alt='Rick and Morty'
+                  fill
+                />
               </Link>
             </div>
           </header>

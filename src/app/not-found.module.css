@@ -1,40 +1,40 @@
 .NotFound {
-    display: flex;
-    width: fit-content;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--spaceDark);
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--spaceDark);
 }
 
 .NotFound h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
 }
 
 .NotFound p {
-    font-size: 24px;
-    font-weight: 400;
-    margin: 10px 0;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 10px 0;
 }
 
 .image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Hace que la imagen mantenga sus proporciones y se recorte para llenar el contenedor */
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen mantenga sus proporciones y se recorte para llenar el contenedor */
+}
 
-  .NotFound a {
-    font-size: 18px;
-    color: var(--teal);
-  }
+.NotFound a {
+  font-size: 18px;
+  color: var(--teal);
+}
 
-  .NotFound a:hover {
-    color: var(--sciFiGreen);
-  }
+.NotFound a:hover {
+  color: var(--sciFiGreen);
+}

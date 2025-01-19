@@ -1,28 +1,27 @@
 .error {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
 
 .catImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Hace que la imagen mantenga sus proporciones y se recorte para llenar el contenedor */
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen mantenga sus proporciones y se recorte para llenar el contenedor */
+}
 
-  .p {
-    color: var(--teal);;
-  }
+.p {
+  color: var(--teal);
+}
 
-  .name {
-    color: var(--sciFiGreen);;
-  }
+.name {
+  color: var(--sciFiGreen);
+}
