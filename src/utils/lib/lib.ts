@@ -1,5 +1,5 @@
 import { ICharacter, ICharactersResponse } from '../interfaces/characters';
-import { ErrorResponse, ErrorType } from '../interfaces/errors';
+import { ErrorResponse, ErrorType, ErrorTypes } from '../interfaces/errors';
 import { fetchGraphQLData } from '../graphql/fetch';
 
 import {
@@ -11,18 +11,11 @@ import {
   singleCharacterQuery,
 } from '@/utils/graphql/queries';
 
-enum ErrorTypes {
-  character = 'character',
-  server = 'sever',
-  unknown = 'unknown',
-  notFound = 'notFound',
-}
-
 const handleError = (error: unknown) => {
   if (error instanceof Error) {
     return { type: error.message as ErrorType };
   }
-  return { type: ErrorTypes.character as ErrorType };
+  return { type: ErrorTypes.unknown as ErrorType };
 };
 
 export const getAllCharacters = async (
@@ -33,7 +26,7 @@ export const getAllCharacters = async (
   try {
     const data: IGraphqlAllCharacters = await fetchGraphQLData(query);
     if (!data.data.characters.results.length) {
-      throw new Error(ErrorTypes.character);
+      throw new Error(ErrorTypes.characterSearch);
     }
     return data.data.characters;
   } catch (error) {
@@ -50,7 +43,7 @@ export const getSingleCharacter = async (
     const data: IGraphqlSingleCharacter = await fetchGraphQLData(query);
 
     if (!data.data.character) {
-      throw new Error(ErrorTypes.character);
+      throw new Error(ErrorTypes.noCharacter);
     }
 
     return data.data.character;

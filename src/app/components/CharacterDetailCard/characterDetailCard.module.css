@@ -1,13 +1,17 @@
 .card {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
-  max-width: 700px;
-  background-color: var(--cardDark);
-  border-radius: 8px;
+
   margin: 20px auto;
+
+  background-color: var(--cardDark);
+
   box-shadow:
     rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  max-width: 700px;
+  border-radius: 8px;
 }
 
 .imageContainer {
@@ -22,8 +26,9 @@
 }
 
 .details {
-  color: var(--textWhite);
   margin: 20px;
+
+  color: var(--textWhite);
 }
 
 .details h1 {
@@ -35,13 +40,16 @@
 }
 
 .details span {
-  color: var(--textGray);
   font-weight: bold;
+
+  color: var(--textGray);
 }
 
 .name {
-  font-size: 26px;
   margin-bottom: 10px;
+
+  font-size: 26px;
+
   color: var(--textWhite);
 }
 

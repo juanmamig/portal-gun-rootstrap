@@ -1,0 +1,29 @@
+.characterStatus {
+  display: flex;
+
+  margin: 4px 0;
+
+  font-size: 16px;
+
+  color: var(--textGray);
+}
+
+.statusIcon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+
+  margin: 5px;
+}
+
+.statusIcon.alive {
+  background-color: var(--sciFiGreen);
+}
+
+.statusIcon.dead {
+  background-color: red;
+}
+
+.statusIcon.unknown {
+  background-color: gray;
+}

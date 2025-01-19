@@ -32,7 +32,11 @@ const CharactersContent = async ({
   );
 };
 
-const Characters = ({ searchParams }: { searchParams: Promise<ISearchParams> }) => {
+const Characters = ({
+  searchParams,
+}: {
+  searchParams: Promise<ISearchParams>;
+}) => {
   return (
     <Suspense
       key={JSON.stringify(searchParams)}

@@ -1,7 +1,11 @@
 export const ERRORS_MESSAGES = {
-  character: {
+  characterSearch: {
     title: 'Missing character',
     message: "We can't find",
+  },
+  noCharacter: {
+    title: 'Missing character',
+    message: "We can't find your character",
   },
   server: {
     title: 'Server error',

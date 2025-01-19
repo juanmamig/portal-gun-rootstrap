@@ -9,6 +9,7 @@
 
 html {
   background-color: var(--spaceDark);
+
   color: var(--textWhite);
 }
 
@@ -27,9 +28,9 @@ body {
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -42,10 +43,11 @@ main {
 }
 
 .headerLogo {
-  max-width: 600px;
   height: 150px;
-  margin: 40px auto;
   position: relative;
+
+  margin: 40px auto;
+  max-width: 600px;
 }
 
 .headerLogo img {

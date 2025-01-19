@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import classes from './characterCard.module.css';
-import Status from './Status';
 
 import { ICharacter } from '@/utils/interfaces/characters';
+import Status from '../Status';
 
 const CharacterCard = ({ character }: { character: ICharacter }) => {
   return (

@@ -1,4 +1,4 @@
-import classes from './characterCard.module.css';
+import classes from './status.module.css';
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 

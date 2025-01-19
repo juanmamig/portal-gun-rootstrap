@@ -6,8 +6,15 @@ import ErrorMessage from '@/app/components/ErrorMesage';
 import CharacterDetailCard from '@/app/components/CharacterDetailCard';
 import { generateMetadataDynamicText } from '@/utils/metadata/metadata';
 import { ErrorType } from '@/utils/interfaces/errors';
+import SkeletonDetailsCard from '@/app/components/SkeletonDetailsCard';
 
-export const generateMetadata = async ({ params }: {
+// Hi Rootstrap! Quick heads-up regarding this function: Generating dynamic metadata can
+// cause some blocking before the UI is rendered, which may result in a slight delay
+// when accessing a detailed page. I've opted to keep the dynamic metadata because,
+// in a blog scenario, it would significantly boost SEO performance.
+export const generateMetadata = async ({
+  params,
+}: {
   params: Promise<{ id: string }>;
 }): Promise<Metadata> => {
   const { id } = await params;
@@ -24,8 +31,6 @@ const CharacterDetailContent = async ({ id }: { id: string }) => {
   return <CharacterDetailCard character={response} />;
 };
 
-const Loading = () => <div>Loading character details...</div>;
-
 export default async function CharacterPage({
   params,
 }: {
@@ -34,7 +39,7 @@ export default async function CharacterPage({
   const { id } = await params;
 
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<SkeletonDetailsCard />}>
       <CharacterDetailContent id={id} />
     </Suspense>
   );

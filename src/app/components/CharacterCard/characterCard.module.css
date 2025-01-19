@@ -1,32 +1,36 @@
 .characterCard {
   background-color: var(--cardDark);
-  border-radius: 4px;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-  cursor: pointer;
   box-shadow:
     rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .characterCard:hover {
-  transform: translateY(-10px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  transform: translateY(-10px);
 }
 
 .cardLink {
   display: block;
   text-decoration: none;
+
   color: inherit;
 }
 
 .imageWrapper {
-  position: relative;
   width: 100%;
   height: 200px;
+  position: relative;
 }
 
 .characterImage {
@@ -38,34 +42,10 @@
 }
 
 .characterName {
+  margin-bottom: 6px;
+
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 6px;
+
   color: var(--textWhite);
-}
-
-.characterStatus {
-  display: flex;
-  font-size: 16px;
-  margin: 4px 0;
-  color: var(--textGray);
-}
-
-.statusIcon {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  margin: 5px;
-}
-
-.statusIcon.alive {
-  background-color: var(--sciFiGreen);
-}
-
-.statusIcon.dead {
-  background-color: red;
-}
-
-.statusIcon.unknown {
-  background-color: gray;
 }

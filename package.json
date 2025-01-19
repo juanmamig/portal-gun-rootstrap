@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}' && stylelint '**/*.{css,scss}'"
   },
   "dependencies": {
     "next": "15.1.4",
@@ -28,6 +28,8 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react": "^7.37.4",
     "globals": "^15.14.0",
+    "stylelint": "^16.13.2",
+    "stylelint-order": "^6.0.4",
     "typescript": "^5",
     "typescript-eslint": "^8.20.0"
   }

@@ -1,12 +1,15 @@
 .skeletonCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px;
-  background-color: white;
-  border-radius: 8px;
   height: 320px;
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 10px;
+
+  background-color: white;
+  flex-direction: column;
+  border-radius: 8px;
 }
 
 .skeletonCard svg {
