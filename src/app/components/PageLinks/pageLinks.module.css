@@ -17,6 +17,10 @@
   text-decoration: underline;
 }
 
+.pageLinksLink:focus {
+  outline: 1px solid var(--sciFiGreen);
+}
+
 .active {
   color: var(--sciFiGreen);
 }

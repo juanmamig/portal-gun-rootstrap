@@ -7,8 +7,6 @@ import SearchBar from './components/SearchBar';
 
 export const metadata: Metadata = {
   title: 'Portal Gun - Rootstrap',
-  description:
-    'How about second chances? Because the first try is never great... just like your ex!',
 };
 
 export default function RootLayout({
@@ -21,14 +19,11 @@ export default function RootLayout({
       <body>
         <main>
           <header>
+            <h1 className='visually-hidden'>
+              Rick's and Morty's character finder
+            </h1>
             <div className='headerLogo'>
-              <Link href='/'>
-                <Image
-                  src='/rick_and_morty_logo.svg'
-                  alt='Rick and Morty'
-                  fill
-                />
-              </Link>
+              <Link href='/'></Link>
             </div>
           </header>
 

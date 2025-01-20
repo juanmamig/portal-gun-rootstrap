@@ -8,23 +8,24 @@ import Status from '../Status';
 
 const CharacterCard = ({ character }: { character: ICharacter }) => {
   return (
-    <div className={classes.characterCard}>
-      <Link className={classes.cardLink} href={`/characters/${character.id}`}>
-        <div className={classes.imageWrapper}>
-          <Image
-            fill
-            objectFit='cover'
-            src={character.image}
-            alt={`Image of ${character.name}`}
-            className={classes.characterImage}
-          />
-        </div>
-        <div className={classes.info}>
-          <h2 className={classes.characterName}>{character.name}</h2>
-          <Status status={character.status} species={character.species} />
-        </div>
-      </Link>
-    </div>
+    <Link
+      className={classes.characterCard}
+      href={`/characters/${character.id}`}
+      aria-label={`Go to ${character.name} detail page`}
+    >
+      <div className={classes.imageWrapper}>
+        <Image
+          fill
+          src={character.image}
+          alt={`Image of ${character.name}`}
+          className={classes.characterImage}
+        />
+      </div>
+      <div className={classes.info}>
+        <h2 className={classes.characterName}>{character.name}</h2>
+        <Status status={character.status} species={character.species} />
+      </div>
+    </Link>
   );
 };
 

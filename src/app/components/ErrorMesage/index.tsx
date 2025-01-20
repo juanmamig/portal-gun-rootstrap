@@ -10,14 +10,14 @@ const ErrorMessage = ({ type, name }: IErrorMessage) => {
 
   return (
     <section className={classes.error}>
-      <h3>{error.title || 'An error ocurred'}</h3>
+      {error?.title && <h2>{error.title}</h2>}
       {name && (
         <p className={classes.p}>
-          {error.message} <span className={classes.name}> {name} </span>
+          {error?.message} <span className={classes.name}> {name} </span>
         </p>
       )}
 
-      {!name && <p className={classes.p}>{error.message}</p>}
+      {!name && <p className={classes.p}>{error?.message}</p>}
       <Image className={classes.catImage} src='/cats.svg' alt='' fill />
     </section>
   );

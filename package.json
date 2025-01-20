@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}' && stylelint '**/*.{css,scss}'"
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}' && stylelint '**/*.{css,scss}' --fix"
   },
   "dependencies": {
     "next": "15.1.4",

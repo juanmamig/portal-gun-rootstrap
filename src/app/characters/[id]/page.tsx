@@ -4,14 +4,19 @@ import { Suspense } from 'react';
 import { getSingleCharacter } from '@/utils/lib/lib';
 import ErrorMessage from '@/app/components/ErrorMesage';
 import CharacterDetailCard from '@/app/components/CharacterDetailCard';
-import { generateMetadataDynamicText } from '@/utils/metadata/metadata';
+// import { generateMetadataDynamicText } from '@/utils/metadata/metadata';
 import { ErrorType } from '@/utils/interfaces/errors';
 import SkeletonDetailsCard from '@/app/components/SkeletonDetailsCard';
 
-// Hi Rootstrap! Quick heads-up regarding this function: Generating dynamic metadata can
-// cause some blocking before the UI is rendered, which may result in a slight delay
-// when accessing a detailed page. I've opted to keep the dynamic metadata because,
-// in a blog scenario, it would significantly boost SEO performance.
+// Hi Rootstrap! Quick heads-up regarding metadata: Generating dynamic metadata
+// cause blocking before the UI is rendered, because of this the Suspense fallback will
+// delay creating a NOT-SO-GOOD UX.
+
+// For this challenge I will leave the static metadata uncommented, knowing
+// that in a real project dynamic meta is a must. On the README.md I explain what
+// I would do.
+
+/*
 export const generateMetadata = async ({
   params,
 }: {
@@ -23,24 +28,30 @@ export const generateMetadata = async ({
     'type' in character ? undefined : character
   );
 };
+*/
 
-const CharacterDetailContent = async ({ id }: { id: string }) => {
+export const metadata: Metadata = {
+  description: 'Detailed Character Page',
+};
+
+const CharacterDetailContent = async ({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) => {
+  const { id } = await params;
   const response = await getSingleCharacter(id);
   if ('type' in response)
     return <ErrorMessage type={response.type as ErrorType} />;
   return <CharacterDetailCard character={response} />;
 };
 
-export default async function CharacterPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
-
+const CharacterPage = ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <Suspense fallback={<SkeletonDetailsCard />}>
-      <CharacterDetailContent id={id} />
+      <CharacterDetailContent params={params} />
     </Suspense>
   );
-}
+};
+
+export default CharacterPage;

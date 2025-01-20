@@ -31,6 +31,10 @@
   cursor: pointer;
 }
 
+.paginationPrevNext:focus {
+  outline: 1px solid var(--sciFiGreen);
+}
+
 .paginationCounter {
   font-size: 24px;
 }

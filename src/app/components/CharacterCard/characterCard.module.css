@@ -1,4 +1,6 @@
 .characterCard {
+  display: block;
+
   background-color: var(--cardDark);
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,11 +22,8 @@
   transform: translateY(-10px);
 }
 
-.cardLink {
-  display: block;
-  text-decoration: none;
-
-  color: inherit;
+.characterCard:focus {
+  outline: 1px solid var(--sciFiGreen);
 }
 
 .imageWrapper {
@@ -34,6 +33,7 @@
 }
 
 .characterImage {
+  object-fit: cover;
   border-radius: 4px 4px 0 0;
 }
 
