@@ -23,7 +23,11 @@ const SearchBar = () => {
 
   return (
     <form className={classes.searchForm} onSubmit={handleSubmit}>
+      <label htmlFor="character" className="visually-hidden">
+        Search for a character
+      </label>
       <input
+        id="character"
         className={classes.searchBox}
         type='text'
         placeholder='Type a character'
@@ -31,7 +35,7 @@ const SearchBar = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <CustomButton type='submit'>Search</CustomButton>
+      <CustomButton aria-label='Search' type='submit'>Search</CustomButton>
     </form>
   );
 };

@@ -22,7 +22,7 @@ export default function RootLayout({
               Rick&apos;s and Morty&apos;s character finder
             </h1>
             <div className='headerLogo'>
-              <Link href='/'></Link>
+              <Link href='/' aria-label='Go to home page'></Link>
             </div>
           </header>
 

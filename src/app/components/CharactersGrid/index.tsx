@@ -15,7 +15,8 @@ const CharacterGrid = ({
 
   return (
     <div className={classes.charactersContainer}>
-      <div className={classes.charactersGrid}>
+      <div className={classes.charactersGrid} aria-live={isLoading ? 'polite' : 'off'}
+        aria-busy={isLoading}>
         {isLoading && loaderQuantity.map((num) => <SkeletonCard key={num} />)}
 
         {!isLoading &&
