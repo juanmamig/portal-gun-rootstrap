@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import './globals.css';
 import Link from 'next/link';
 
@@ -20,7 +19,7 @@ export default function RootLayout({
         <main>
           <header>
             <h1 className='visually-hidden'>
-              Rick's and Morty's character finder
+              Rick&apos;s and Morty&apos;s character finder
             </h1>
             <div className='headerLogo'>
               <Link href='/'></Link>
